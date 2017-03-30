@@ -1,0 +1,14 @@
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+<%= link_to 'Редагувати', edit_article_path %>
+<%= link_to 'Видалити', article_path ,
+              method: :delete,
+              data: { confirm: 'Ви впевнені?' } %>
+<%= link_to 'Назад', articles_path %>

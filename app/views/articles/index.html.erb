@@ -1,0 +1,21 @@
+<h1 align="center" >Список статей</h1>
+<table align="center" >
+  <tr>
+    <th>Заголовок</th>
+    <th>Текст</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Показати', article_path(article) %></td>
+      <td><%= link_to 'Редагувати', edit_article_path(article) %></td>
+      <td><%= link_to 'Видалити', article_path(article),
+              method: :delete,
+              data: { confirm: 'Ви впевнені?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Нова стаття', new_article_path %>
+<p align='center'><%= link_to 'Головна сторінка', controller: 'welcome' %></p>
