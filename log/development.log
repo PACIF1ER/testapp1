@@ -185,3 +185,111 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 75ms (Views: 61.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-30 18:18:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1002ms (Views: 968.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-03-30 18:18:28 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (16.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 199ms (Views: 73.4ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 22:35:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (91.4ms)
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"welcome"}):
+    18:   <% end %>
+    19: </table>
+    20: <%= link_to 'Нова стаття', new_article_path %>
+    21: <p align='center'><%= link_to 'Головна сторінка', controller: 'welcome' %></p>
+  
+app/views/articles/index.html.erb:21:in `_app_views_articles_index_html_erb___4380373803155246504_22646980'
+  Rendering /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (24.3ms)
+  Rendering /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendering /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/m00n/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.5ms)
+Started GET "/" for 127.0.0.1 at 2017-03-30 22:39:08 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 1488ms (Views: 1469.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 22:45:43 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 83ms (Views: 78.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2017-03-30 22:45:46 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 93ms (Views: 58.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-03-30 22:45:50 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 68ms (Views: 61.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 22:45:58 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/articles/2" for 127.0.0.1 at 2017-03-30 23:04:56 +0300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3M+xFGTCIICRNZSF7BMWNL1CTkXkhh1lfEi31losYDc1pA62kIWMquEe5wp6Wc4PSzDQ74cR8GMqWAu7gT1Viw==", "id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (77.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  [1m[35m (184.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 272ms (ActiveRecord: 261.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-03-30 23:04:57 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 76ms (Views: 68.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-03-30 23:05:00 +0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (198.4ms)
+Completed 200 OK in 320ms (Views: 250.4ms | ActiveRecord: 0.0ms)
+
+
